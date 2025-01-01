@@ -1,6 +1,6 @@
 from gemini import Gemini_Model
 from llama import Llama_Model
-from compareAi import Compare_Model
+from compareAI import Compare_Model
 
 
 
@@ -57,6 +57,18 @@ if __name__ == "__main__":
 
 		elif command_line == "1":
 			print("Comparing Gemini and Llama")
+			while True:
+				user_input = input("CompareModel> ")
+
+				if user_input.lower == "exit":
+					print("Exiting Model.")
+					break
+				elif user_input != "A":
+					compare_Output = Compare_Model.GeminiVsLlama(user_input)
+				
+				print("If you want to analyze these output, type A")
+				if user_input == "A":
+					Compare_Model.analyzeOutput(compare_Output)
 
 		elif command_line == "exit":
 			break

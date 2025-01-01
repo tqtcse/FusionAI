@@ -16,6 +16,7 @@ class Gemini_Model:
 		model = genai.GenerativeModel("gemini-1.5-flash")
 		response = model.generate_content(input_text)
 		print(response.text)
+		return response.text
 
 # output('hello')
 
