@@ -24,8 +24,8 @@ load_dotenv()
 
 # # In kết quả
 # print(chat_completion.choices[0].message.content)
-class Gemini_Model:
-    def GPT(input_text):
+class GPT_Model:
+    def output(input_text):
         client = openai.OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),base_url="https://api.yescale.io/v1")
         response = client.chat.completions.create(model="gpt-4o-mini", messages = [
             {
@@ -33,8 +33,8 @@ class Gemini_Model:
                 "content": input_text,
             }
         ])
-        print(response.text)
+        print(response.choices[0].message.content)
 
-        return response.text
+        return response.choices[0].message.content
 
 

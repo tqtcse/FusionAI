@@ -19,3 +19,4 @@ completion = client.completions.create(
     prompt=f"{HUMAN_PROMPT} What is Matthew effect? {AI_PROMPT}",
 )
 Markdown(completion.completion)
+
