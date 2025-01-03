@@ -70,10 +70,17 @@ if __name__ == "__main__":
 					break
 				if user_input != "A":
 					compare_Output = Compare_Model.GeminiVsLlama(user_input)
+					print("If you want to analyze these output, type A")
 				
-				print("If you want to analyze these output, type A")
 				if user_input == "A":
 					Compare_Model.analyzeOutput(compare_Output)
+					while True:
+						user_input2 = input("Analyze> ")
+						if user_input2 == "exit":
+							print("Exiting Analyze Mode...")
+							break
+
+
 
 		elif command_line == "exit":
 			break
