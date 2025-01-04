@@ -12,14 +12,14 @@ body {
 }
 
 .header {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+   /* background-color: #007bff;
+    color: black;
+    padding: 10px 20px;*/
     text-align: center;
 }
 
 .header nav a {
-    color: white;
+    color: black;
     margin: 0 10px;
     text-decoration: none;
 }
