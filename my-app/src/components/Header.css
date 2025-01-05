@@ -1,20 +1,20 @@
 .header {
-    background-color: #009bff;
-    color: white;
-    padding: 10px 20px;
+    /*background-color: #009bff;
+    color: white;*/
+    padding: 40px 50px;
     text-align: center;
 }
 
 .header-content {
-    display: flex;
+/*    display: flex;*/
     align-items: center;
     justify-content: center;
 }
 
-.site-title {
-    margin-right: 20px;
-}
+/*.site-title {
+    margin-right: 40px;
+}*/
 
 .logo {
-    height: 70px; /* Điều chỉnh kích thước logo theo ý muốn */
+    height: 200px; /* Điều chỉnh kích thước logo theo ý muốn */
 }

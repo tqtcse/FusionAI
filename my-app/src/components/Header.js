@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/AI.png'; // Đường dẫn đến tệp logo
-// import './Header.css'; // Tệp CSS cho Header
+import './Header.css'; // Tệp CSS cho Header
 
 function Header() {
     return (
@@ -11,9 +11,9 @@ function Header() {
                 <img src={logo} alt="Logo" className="logo" />
             </div>
             <nav>
-                <Link to="/">Home</Link>
-                {' | '}
+                <Link to="/">Home</Link> {' | '}
                 <Link to="/about">About</Link>
+                <Link to="/chat">Chat</Link>
             </nav>
         </header>
     );
