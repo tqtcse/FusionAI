@@ -5,6 +5,8 @@ function Chat(){
 
 	const [messages, setMessages] = useState([]);
 	const [input, setInput] = useState('');
+	const [selectedModel, setSelectedModel] = useState('model1');
+
 
 	const handleSend = () => {
 		if(input.trim() === '') return;
@@ -16,6 +18,10 @@ function Chat(){
 	    }, 1000); // Trả lời sau 1 giây
 	}	
 
+	const handleModelChange = (e) => {
+    setSelectedModel(e.target.value);  // Cập nhật model khi người dùng chọn
+  	};
+
 	return (
 		<div className="chat-container">
 			<div className="chat-window">
@@ -26,6 +32,18 @@ function Chat(){
 					{msg.text}
 					</div>
 					))}
+			</div>
+			<div className="select-model">
+				 <label htmlFor="model-select"></label>
+			        <select 
+			          id="model-select" 
+			          value={selectedModel} 
+			          onChange={handleModelChange} 
+			        >
+			          <option value="gpt">GPT</option>
+			          <option value="gemini">Gemini</option>
+			          <option value="llama">Llama</option>
+			        </select>
 			</div>
 			<div className="chat-input">
 				<input type = "text" value={input} 

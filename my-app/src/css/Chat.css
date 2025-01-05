@@ -1,4 +1,32 @@
+.select-model {
+  display: flex;
+  padding-left: 10px;
+  margin: 10px 0;
+  border-radius: 20px;
+}
 
+.select-model select {
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+
+  cursor: pointer;
+}
+
+
+.dropdown button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+}
+.dropdown button:hover {
+  background-color: #f0f0f0;
+}
 .chat-container {
 
   width: 800px;
@@ -19,6 +47,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 
 .message {
   margin: 5px 0;
