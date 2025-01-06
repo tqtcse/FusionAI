@@ -60,7 +60,7 @@
 .user-message {
   background-color: #e0e0e0;
   color: black;
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 10px;
   border-radius: 10px;
   display: inline-block;
@@ -71,7 +71,7 @@
 
 .ai-message {
   background-color: #e0e0e0;
-  align-self: flex-end;
+  align-self: flex-start;
   padding: 10px;
   border-radius: 10px;
   display: inline-block;

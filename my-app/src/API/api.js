@@ -1,13 +1,17 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const fetchData = async () => {
+const callGeminiAPI = async (inputData) => {
   try {
-    const response = await axios.get('http://localhost:5000/api/data');
-    return response.data;  // Trả về dữ liệu từ API
+    const response = await axios.post('http://localhost:5000/gemini', inputData, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    return response.data; // Trả về kết quả từ API Gemini
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error calling Gemini API:', error);
     throw error;
   }
 };
 
-export default fetchData;
+export default callGeminiAPI;
