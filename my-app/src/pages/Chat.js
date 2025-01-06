@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/Chat.css';
-import callGeminiAPI from '../API/api'
+import callGeminiAPI from '../API/geminiapi'
 
 
 function Chat(){
@@ -11,13 +11,7 @@ function Chat(){
 	const [result, setResult] = useState(null);
 
 	const handleSend = async () => {
-		// try {
-		// 	const data = { input };
-		// 	const response = await callGeminiAPI(data);
-		// 	setResult(response);
-		// } catch (error) {
-		// 	console.error('Lỗi rùi:', error);
-		// }
+		
 		if(input.trim() === '') return;
 		setMessages([...messages, { text: input, sender: 'user' }]); // Thêm tin nhắn người dùng
 	    setInput(''); // Xóa nội dung input
@@ -28,9 +22,7 @@ function Chat(){
 		} catch (error) {
 			console.error('Lỗi rùi:', error);
 		}
-	    // setTimeout(() => {
-	    //   setMessages((prev) => [...prev, { text: 'AI trả lời: ' + input, sender: 'ai' }]);
-	    // }, 1000); // Trả lời sau 1 giây
+	    
 	}	
 
 	const handleKeyDown = (e) => {
