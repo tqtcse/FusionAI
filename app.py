@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from gemini import Gemini_Model
-
+from gpt import GPT_Model
+from llama import Llama_Model
 
 app = Flask(__name__)
 
@@ -29,6 +30,18 @@ def gemini():
     geminiOutput = Gemini_Model.output(data)
     return jsonify(geminiOutput)
 
+
+@app.route('/gpt', methods=['POST'])
+def gpt():
+    data = request.json
+    gptOutput = GPT_Model.output(data)
+    return jsonify(gptOutput)
+
+@app.route('/llama', methods=['POST'])
+def llama():
+    data = request.json
+    llamaOutput = Llama_Model.output(data)
+    return jsonify(llamaOutput)
 
 if __name__ == '__main__':
     app.run(port=5000)

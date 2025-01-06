@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import '../css/Chat.css';
 import callGeminiAPI from '../API/geminiapi'
-
+import callGPTAPI from '../API/gptapi'
+import callLlamaAPI from '../API/llamaapi'
 
 function Chat(){
 
@@ -17,7 +18,18 @@ function Chat(){
 	    setInput(''); // Xóa nội dung input
 	    // Xử lý phản hồi giả lập (AI trả lời)
 	    try {
-			const response = await callGeminiAPI(input);
+	    	let response;
+	    	
+	    	if (selectedModel === 'gemini') {
+	    		response = await callGeminiAPI(input);
+	    	} else if (selectedModel === 'gpt' || selectedModel === 'model1') {
+	    		response = await callGPTAPI(input);
+	    	} else if (selectedModel === 'llama') {
+	    		response = await callLlamaAPI(input);
+	    	}
+			
+			
+			
 			setMessages((prev) => [...prev, { text:  response, sender: 'ai' }]);
 		} catch (error) {
 			console.error('Lỗi rùi:', error);
