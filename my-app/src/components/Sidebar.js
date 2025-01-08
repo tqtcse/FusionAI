@@ -15,7 +15,9 @@ function Sidebar(){
 
 					<li><Link to ="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
 					<li><Link to ="/chat" className={location.pathname === '/chat'? 'active' : ''}>Chat</Link></li>
+					<li><Link to ="/compareai" className={location.pathname === '/compareai' ? 'active' : ''}>Compare AI</Link></li>
 					<li><Link to ="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
+					
 				</ul>
 			</nav>
 		</div>

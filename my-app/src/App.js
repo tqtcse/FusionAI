@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Chat from './pages/Chat';
+import Compareai from './pages/CompareAI';
 import './App.css';
 
 
@@ -20,9 +21,9 @@ function App() {
                     <main className="content">
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            
                             <Route path="/about" element={<About />} />
                             <Route path="/chat" element={<Chat />} />
+                            <Route path="/compareai" element={<Compareai/>} />
                         </Routes>
                     </main>
                 </div>
