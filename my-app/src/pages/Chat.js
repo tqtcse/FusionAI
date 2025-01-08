@@ -49,6 +49,8 @@ function Chat(){
 
 	return (
 		<div className="chat-container">
+			
+
 			<div className="chat-window">
 				{messages.map((msg, index) => (
 					<div 
